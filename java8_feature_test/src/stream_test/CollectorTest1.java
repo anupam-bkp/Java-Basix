@@ -19,7 +19,7 @@ import java8_feature_model.Person;
  * This is a Mutable Reduction operation using collect(Collector)
  *
  */
-public class CollectorTest {
+public class CollectorTest1 {
 
 	// <R,A> R collect(Collector<? super T,A,R> collector)
 	
@@ -29,10 +29,6 @@ public class CollectorTest {
 		List<Employee> employees = ModelFactory.getEmployees();
 
 //=====================================================================================================================//
-		
-		System.out.println("============Using Lambda Expressions ===============");
-		//Using Lambda Expressions
-		
 		usingMethodReferences(employees);
 		usingLambdaExpression(employees);
 		usingAnonymousInnerClass(employees);
@@ -60,7 +56,7 @@ public class CollectorTest {
 
 					@Override
 					public BiConsumer<List<String>, String> accumulator() {
-						return ArrayList :: add;
+						return List :: add;
 					}
 
 					@Override
@@ -82,6 +78,8 @@ public class CollectorTest {
 					}
 					
 				});
+		
+		System.out.println(collect);
 		
 	}
 		
