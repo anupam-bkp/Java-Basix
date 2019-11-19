@@ -62,8 +62,8 @@ public class CollectorTest1 {
 					@Override
 					public BinaryOperator<List<String>> combiner() {
 						return (result1, result2) -> {
-							result1.addAll(result2);
-							return result1;
+//							result1.addAll(result2);
+							return null;
 						};
 					}
 
@@ -82,9 +82,6 @@ public class CollectorTest1 {
 		System.out.println(collect);
 		
 	}
-		
-	
-	
 	
 	//Using Lambda Expressions
 	private static void usingLambdaExpression(List<Employee> employees) {
@@ -111,8 +108,8 @@ public class CollectorTest1 {
 			@Override
 			public BinaryOperator<List<String>> combiner() {
 				return (result1, result2) -> {
-					result1.addAll(result2);
-					return result1;
+//					result1.addAll(result2);
+					return null;
 				};
 			}
 

@@ -108,7 +108,7 @@ public class MutableReductionTest {
 								t.addAll(u);
 							}
 						}
-						);
+					);
 
 
 		System.out.println(names);
