@@ -47,4 +47,19 @@ public class Employee {
 	public void setSalary(int salary) {
 		this.salary = salary;
 	}
+
+	public String getEmployeeDeptName() {
+		return this.dept.getName();
+	}
+	
+	public String getEmployeeName() {
+		return this.person.getName();
+	}
+	
+	@Override
+	public String toString() {
+		return this.getPerson().getName();
+	}
+	
+	
 }
