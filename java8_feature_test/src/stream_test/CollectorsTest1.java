@@ -1,11 +1,15 @@
 package stream_test;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.TreeMap;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
+import java.util.function.Supplier;
 import java.util.stream.Collectors;
 
 import java8_feature_model.Employee;
@@ -23,6 +27,7 @@ public class CollectorsTest1 {
 		collectInMap(employees);
 		collectInMap1(employees);
 		collectInMap2(employees);
+		collectInCollection(employees);
 	}
 	
 	/*Collecting name of each employee working in HR dept into a List.
@@ -170,6 +175,42 @@ public class CollectorsTest1 {
 			
 			System.out.println(collect);
 			
+	}
+	
+	/*
+	 	public static <T,C extends Collection<T>> Collector<T,?,C> toCollection(Supplier<C> collectionFactory)
+	 */
+	private static void collectInCollection(List<Employee> employees) {
+
+		//Using Anonymous Inner Class
+		List<String> collect = employees.stream().map(new Function<Employee, String>() {
+
+			@Override
+			public String apply(Employee t) {
+				return t.getEmployeeName();
+			}
+		})
+		.collect(Collectors.toCollection(new Supplier<List<String>>() {
+
+			@Override
+			public List<String> get() {
+				return new ArrayList<>();
+			}
+		}));
+		
+		System.out.println(collect);
+		
+		//Using Lambda Expression
+		List<String> collect2 = employees.stream().map(emp -> emp.getEmployeeName())
+		.collect(Collectors.toCollection(() -> new LinkedList<String>()));
+		
+		System.out.println(collect2);
+
+		//Using Method References
+		Set<String> collect3 = employees.stream().map(Employee :: getEmployeeName)
+		.collect(Collectors.toCollection(HashSet :: new));
+		System.out.println(collect3);
+		
 	}
 	
 }
