@@ -14,8 +14,8 @@ public class StreamTest3 {
 		
 		List<Employee> employees = ModelFactory.getEmployees();
 		
-//		peekTest(employees);
-//		skipTest(employees);
+		peekTest(employees);
+		skipTest(employees);
 		otherFunctions(employees);
 	}
 	

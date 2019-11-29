@@ -15,12 +15,12 @@ public class CollectorsTest4 {
 	public static void main(String[] args) {
 		
 		List<Employee> employees = ModelFactory.getEmployees();
-//		countingTest(employees);
+		countingTest(employees);
 		maxByTest(employees);
 		minByTest(employees);
-//		summarizingIntTest(employees);
-//		summingIntTest(employees);
-//		averagingIntTest(employees);
+		summarizingIntTest(employees);
+		summingIntTest(employees);
+		averagingIntTest(employees);
 		
 	}
 	

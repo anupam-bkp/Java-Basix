@@ -21,9 +21,9 @@ public class StreamTest2 {
 		List<Employee> employees = ModelFactory.getEmployees();
 		
 		mapTest(employees);
-//		mapToIntTest(employees);
-//		flatMapTest(employees);
-//		flatMapToIntTest(employees);
+		mapToIntTest(employees);
+		flatMapTest(employees);
+		flatMapToIntTest(employees);
 	}
 
 	//<R> Stream<R> flatMap(Function<? super T,? extends Stream<? extends R>> mapper)

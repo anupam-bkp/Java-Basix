@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Function;
 import java.util.function.Predicate;
-import java.util.function.Supplier;
 import java.util.function.UnaryOperator;
 import java.util.stream.Stream;
 
@@ -19,9 +18,9 @@ public class StreamTest1 {
 
 	public static void main(String[] args) {
 		
-//		streamCreationTest1();
+		streamCreationTest1();
 		streamCreationTest2WithLimit();
-		
+		aggregateOperationTest1();
 	}  //Main Ends Here
 	
 	private static void streamCreationTest1() {
@@ -43,13 +42,13 @@ public class StreamTest1 {
 		
 		
 		//static <T> Stream<T> generate(Supplier<T> s)
-		Stream<Integer> generate = Stream.generate(new Supplier<Integer>() {
+		/*Stream<Integer> generate = Stream.generate(new Supplier<Integer>() {
 
 			@Override
 			public Integer get() {
 				return 10;
 			}
-		});
+		});*/
 	}
 	
 	//static <T> Stream<T> iterate(T seed, UnaryOperator<T> f)

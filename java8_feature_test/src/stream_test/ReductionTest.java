@@ -17,8 +17,8 @@ public class ReductionTest {
 		List<Employee> employees = ModelFactory.getEmployees();
 		
 		reductionTest1(employees);
-//		reductionTest2(employees);
-//		reductionTest3(employees);
+		reductionTest2(employees);
+		reductionTest3(employees);
 	}
 	
 	/*
