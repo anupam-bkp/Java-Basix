@@ -8,11 +8,6 @@ import java.util.concurrent.locks.AbstractQueuedSynchronizer;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 
-
-/**
- * @author Bhagvan Kommadi
- *
- */
 public class MutexObjectSynchronizer implements Lock, Serializable {
 
 	private static final long serialVersionUID = -4832743297432717114L;

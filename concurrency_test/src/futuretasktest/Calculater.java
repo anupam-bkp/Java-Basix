@@ -1,9 +1,5 @@
 package futuretasktest;
 
-/**
- * @author ashraf
- *
- */
 public class Calculater {
 	
 	/**
